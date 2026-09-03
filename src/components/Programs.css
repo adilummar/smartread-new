@@ -1,0 +1,224 @@
+.programs-section {
+  background-color: white;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.programs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.decorative-arrow {
+  color: var(--kidza-purple);
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.program-card {
+  border-radius: 24px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+}
+/* Kidza pastel card backgrounds */
+.program-card:nth-child(1) { background-color: #FEF9C3; } /* Light yellow */
+.program-card:nth-child(2) { background-color: #FCE7F3; } /* Light pink */
+.program-card:nth-child(3) { background-color: #DBEAFE; } /* Light blue */
+.program-card:nth-child(4) { background-color: #DCFCE7; } /* Light green */
+.hub-tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.hub-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: 2px solid;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hub-tab-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.hub-tab-btn.active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.detailed-course-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detailed-course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.course-image-wrapper {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.course-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.detailed-course-card:hover .course-image {
+  transform: scale(1.05);
+}
+
+.course-age-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.course-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-title {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.course-desc {
+  color: var(--kidza-text-muted);
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.course-enroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.course-enroll-btn:hover {
+  opacity: 0.9;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .programs-container {
+    padding: 0 20px;
+  }
+  
+  .programs-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Make tabs horizontally scrollable on mobile like modern apps */
+  .hub-tabs-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 15px;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .hub-tabs-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  
+  .hub-tab-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .programs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
