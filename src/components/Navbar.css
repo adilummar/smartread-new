@@ -1,10 +1,13 @@
 .kidza-navbar {
-  background: white;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 16px 40px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar-container {
@@ -62,7 +65,7 @@
 .nav-links a {
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--kidza-text-main);
+  color: white;
   transition: color 0.2s;
 }
 
@@ -77,8 +80,8 @@
 }
 
 .icon-btn {
-  background: white;
-  border: 1px solid #E5E7EB;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -86,13 +89,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--kidza-text-main);
+  color: white;
   transition: all 0.2s;
 }
 
 .icon-btn:hover {
-  border-color: var(--kidza-purple);
-  color: var(--kidza-purple);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -107,15 +110,6 @@
   }
   .logo {
     gap: 6px !important;
-  }
-  .logo img {
-    height: 28px !important;
-  }
-  .logo-title {
-    font-size: 1.1rem !important;
-  }
-  .logo-subtitle {
-    font-size: 0.65rem !important;
   }
   .navbar-right {
     gap: 12px;

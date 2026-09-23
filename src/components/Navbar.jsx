@@ -8,11 +8,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="navbar-left">
           <div className="logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src="/smart-read-logo1.png" alt="Smart Read Icon" style={{ height: '36px' }} />
-            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.1' }}>
-              <span className="logo-title" style={{ color: 'var(--kidza-purple)', fontWeight: '900', fontSize: '1.3rem', letterSpacing: '-0.02em' }}>SmartRead</span>
-              <span className="logo-subtitle" style={{ color: 'var(--kidza-orange)', fontWeight: '700', fontSize: '0.75rem', letterSpacing: '0.05em', textTransform: 'uppercase' }}>Academy</span>
-            </div>
+            <img src="/Smart Read Logo.png" alt="Smart Read Logo" style={{ height: '24px' }} />
           </div>
           
         </div>

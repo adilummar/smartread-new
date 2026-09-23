@@ -41,12 +41,12 @@
 /* Ensure mobile looks great */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 60vh; /* Adjust height for mobile */
+    min-height: 80vh; /* Adjust height for mobile */
   }
   .hero-slide-fg {
     background-image: var(--bg-mobile);
-    background-size: contain; /* Prevents text from being cut off on tall phone screens */
-    background-position: center;
+    background-size: cover; /* Fill the area to remove empty space around poster */
+    background-position: top center;
   }
 }
 
