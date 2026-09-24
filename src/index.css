@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
 
 :root {
-  --kidza-purple: #6246D2;
-  --kidza-purple-dark: #513AB0;
-  --kidza-purple-light: #EBE7F7;
-  --kidza-orange: #F56D24;
-  --kidza-orange-dark: #DC5E1C;
-  --kidza-orange-light: #FEF0E7;
+  --kidza-purple: #1E2461;
+  --kidza-purple-dark: #12173D;
+  --kidza-purple-light: #E0F2FC;
+  --kidza-orange: #E8A820;
+  --kidza-orange-dark: #D49A1D;
+  --kidza-orange-light: #FEF3D7;
   --kidza-yellow: #FACC15;
   --kidza-yellow-light: #FEF9C3;
-  --kidza-blue: #3B82F6;
-  --kidza-pink: #EC4899;
+  --kidza-blue: #3B9FD4;
+  --kidza-pink: #2BBFB3;
   --kidza-green: #22C55E;
   
   --kidza-text-main: #2A1F45;
@@ -87,7 +87,7 @@ ul {
 .btn-orange {
   background-color: var(--kidza-orange);
   color: white;
-  box-shadow: 0 4px 14px rgba(245, 109, 36, 0.4);
+  box-shadow: 0 4px 14px rgba(232, 168, 32, 0.4);
 }
 .btn-orange:hover {
   background-color: var(--kidza-orange-dark);
@@ -97,7 +97,7 @@ ul {
 .btn-purple {
   background-color: var(--kidza-purple);
   color: white;
-  box-shadow: 0 4px 14px rgba(98, 70, 210, 0.4);
+  box-shadow: 0 4px 14px rgba(30, 36, 97, 0.4);
 }
 .btn-purple:hover {
   background-color: var(--kidza-purple-dark);

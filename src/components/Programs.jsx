@@ -30,7 +30,7 @@ const hubs = [
     title: "Future Leaders",
     icon: <Star size={20} />,
     color: "var(--kidza-pink)",
-    bgColor: "#FDF2F8",
+    bgColor: "#E0F8F6",
     courses: [
       {
         id: 'fl-1',

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { MapPin, Phone, Mail, Globe, MessageCircle, MessageSquare, Video } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, Instagram, MessageCircle, MessageSquare, Video } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
             <div className="social-links">
               <a href="#"><Globe size={18} /></a>
-              <a href="https://instagram.com/smart_read_uae"><MessageCircle size={18} /></a>
+              <a href="https://www.instagram.com/smart_read_uae?stkn=MXA4ZnZxeXU5MDExbA==" target="_blank" rel="noopener noreferrer"><Instagram size={18} /></a>
               <a href="#"><Video size={18} /></a>
               <a href="#"><MessageSquare size={18} /></a>
             </div>
@@ -54,7 +54,7 @@ const Footer = () => {
             <ul className="footer-contact-info">
               <li>
                 <MapPin size={18} color="var(--kidza-orange)" />
-                <span>Al Qasimia, Sharjah, UAE</span>
+                <a href="https://maps.app.goo.gl/XygKCaCTDjuqH3Ki8?g_st=aw" target="_blank" rel="noopener noreferrer">Al Qasimia, Sharjah, UAE</a>
               </li>
               <li>
                 <Phone size={18} color="var(--kidza-orange)" />

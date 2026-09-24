@@ -81,9 +81,8 @@ const StatsGallery = () => {
               </div>
               <div className="stat-text">
                 <h4>Sharjah</h4>
-                <p>Al Qasimia, UAE</p>
+                <p><a href="https://maps.app.goo.gl/XygKCaCTDjuqH3Ki8?g_st=aw" target="_blank" rel="noopener noreferrer" style={{color: 'inherit', textDecoration: 'none'}}>Al Qasimia, UAE</a></p>
               </div>
-            </div>
           </div>
         </div>
       </div>
