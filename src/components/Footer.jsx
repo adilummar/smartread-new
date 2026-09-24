@@ -1,6 +1,14 @@
 import React from 'react';
 import './Footer.css';
-import { MapPin, Phone, Mail, Globe, Instagram, MessageCircle, MessageSquare, Video } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, MessageCircle, MessageSquare, Video } from 'lucide-react';
+
+const InstagramIcon = ({ size = 24, color = "currentColor" }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -21,7 +29,7 @@ const Footer = () => {
             </p>
             <div className="social-links">
               <a href="#"><Globe size={18} /></a>
-              <a href="https://www.instagram.com/smart_read_uae?stkn=MXA4ZnZxeXU5MDExbA==" target="_blank" rel="noopener noreferrer"><Instagram size={18} /></a>
+              <a href="https://www.instagram.com/smart_read_uae?stkn=MXA4ZnZxeXU5MDExbA==" target="_blank" rel="noopener noreferrer"><InstagramIcon size={18} /></a>
               <a href="#"><Video size={18} /></a>
               <a href="#"><MessageSquare size={18} /></a>
             </div>
