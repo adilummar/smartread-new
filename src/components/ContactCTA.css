@@ -2,12 +2,16 @@
   background-color: white;
   padding-top: 40px;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .contact-cta-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px 60px;
+  width: 100%;
 }
 
 .newsletter-card {
@@ -84,5 +88,23 @@
   .newsletter-form {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-cta-container {
+    padding: 0 16px 40px;
+  }
+  .newsletter-card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+  .newsletter-text h3 {
+    font-size: clamp(1.3rem, 6vw, 1.6rem);
+  }
+  .newsletter-input {
+    padding: 12px 16px;
+    width: 100%;
+    min-width: 0;
   }
 }

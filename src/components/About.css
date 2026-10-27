@@ -2,6 +2,8 @@
   background-color: #F9F9FC;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .about-container {
@@ -129,12 +131,16 @@
 
 @media (max-width: 768px) {
   .about-container {
-    padding: 40px 20px 60px;
+    padding: 40px 16px 60px;
     gap: 30px;
+    width: 100%;
+    max-width: 100%;
   }
   .about-image-wrapper {
     margin-bottom: 40px;
     margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
   }
   .about-img {
     width: 100%;
@@ -146,10 +152,10 @@
     display: none; /* Hide the messy blob on mobile for a cleaner, modern look */
   }
   .activities-bubble {
-    width: 85px;
-    height: 85px;
-    bottom: -25px;
-    right: 20px;
+    width: 80px;
+    height: 80px;
+    bottom: -20px;
+    right: 10px;
     box-shadow: 0 10px 20px rgba(34, 197, 94, 0.4);
   }
   .activities-bubble .bubble-num {
@@ -159,7 +165,7 @@
     font-size: 0.65rem;
   }
   .section-title {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 6vw, 2rem);
     margin: 15px 0;
   }
   .pillars-grid {
@@ -168,12 +174,12 @@
   }
   .float-bulb {
     top: -20px;
-    right: 20px;
+    right: 10px;
     transform: scale(0.8);
   }
   .float-heart {
     bottom: 30px;
-    left: -15px;
+    left: 0;
     transform: scale(0.8) rotate(-15deg);
   }
 }

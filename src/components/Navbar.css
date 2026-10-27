@@ -108,6 +108,11 @@
 @media (max-width: 768px) {
   .kidza-navbar {
     padding: 12px 16px;
+    max-width: 100%;
+  }
+  .navbar-container {
+    width: 100%;
+    max-width: 100%;
   }
   .logo {
     gap: 6px !important;
@@ -126,5 +131,27 @@
   }
   .navbar-right .btn-orange svg {
     display: none; /* Hide arrow on mobile to save space */
+  }
+}
+
+@media (max-width: 400px) {
+  .kidza-navbar {
+    padding: 10px 10px;
+  }
+  .logo img {
+    height: 20px !important;
+    max-width: 105px;
+    object-fit: contain;
+  }
+  .navbar-right {
+    gap: 6px;
+  }
+  .icon-btn {
+    width: 32px;
+    height: 32px;
+  }
+  .navbar-right .btn-orange {
+    padding: 6px 10px;
+    font-size: 0.76rem;
   }
 }

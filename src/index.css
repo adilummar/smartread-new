@@ -25,12 +25,29 @@
   padding: 0;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
 body {
   font-family: 'Nunito', sans-serif;
   color: var(--kidza-text-main);
   background-color: var(--bg-color);
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+
+#root, .app-wrapper, main {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,13 +69,14 @@ ul {
 .wave-divider {
   position: relative;
   width: 100%;
+  max-width: 100%;
   overflow: hidden;
   line-height: 0;
 }
 .wave-divider svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
+  width: 100%;
   height: 59px;
 }
 .wave-divider .shape-fill {
