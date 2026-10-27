@@ -99,11 +99,6 @@
   color: white;
 }
 
-.whatsapp-nav-btn:hover {
-  background: rgba(37, 211, 102, 0.25) !important;
-  border-color: #25D366 !important;
-}
-
 @media (max-width: 1024px) {
   .nav-links {
     display: none;
