@@ -10,8 +10,9 @@ const defaultSlides = [
     title1: "",
     title2: "",
     text: "",
-    imageDesktop: "/hero1-landscape.png",
-    imageMobile: "/hero1.jpeg",
+    imageDesktop: "/hero1-landscape.jpg",
+    imageMobile: "/hero1-portrait.jpg",
+    alt: "Smart Read Fest '26 - Sharjah",
     badge: ""
   },
   {
@@ -19,8 +20,9 @@ const defaultSlides = [
     title1: "",
     title2: "",
     text: "",
-    imageDesktop: "/hero2-landscape.png",
-    imageMobile: "/hero2.jpeg",
+    imageDesktop: "/hero2-landscape.jpg",
+    imageMobile: "/hero2-portrait.jpg",
+    alt: "Little Dreamers Preschool & Day Care - Admission Open",
     badge: ""
   }
 ];
@@ -29,6 +31,8 @@ const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = defaultSlides;
   const [loading, setLoading] = useState(true);
+  const [touchStartX, setTouchStartX] = useState(null);
+  const [touchEndX, setTouchEndX] = useState(null);
 
   useEffect(() => {
     /*
@@ -74,11 +78,45 @@ const Hero = () => {
     if (slides.length > 0) setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const handleTouchStart = (e) => {
+    setTouchEndX(null);
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return;
+    const distance = touchStartX - touchEndX;
+    if (distance > 50) {
+      nextSlide();
+    } else if (distance < -50) {
+      prevSlide();
+    }
+  };
+
   return (
-    <section className="hero-section" id="hero">
+    <section 
+      className="hero-section" 
+      id="hero"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       
       {slides.map((slide, index) => (
         <div key={slide.id} className={`hero-slide ${index === currentSlide ? 'active' : ''}`}>
+          <picture className="hero-slide-picture">
+            <source media="(max-width: 768px)" srcSet={slide.imageMobile} />
+            <img 
+              src={slide.imageDesktop} 
+              alt={slide.alt || slide.title1 || `SmartRead Academy Slide ${index + 1}`} 
+              className="hero-slide-img"
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          </picture>
           <div 
             className="hero-slide-fg" 
             style={{ 

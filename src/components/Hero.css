@@ -25,6 +25,24 @@
   z-index: 2;
 }
 
+.hero-slide-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
 .hero-slide-fg {
   position: absolute;
   top: 0;
@@ -35,18 +53,33 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Ensure mobile looks great */
 @media (max-width: 768px) {
   .hero-section {
-    min-height: 80vh; /* Adjust height for mobile */
+    min-height: 70vh;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    max-height: 85vh;
   }
   .hero-slide-fg {
     background-image: var(--bg-mobile);
-    background-size: cover; /* Fill the area to remove empty space around poster */
+    background-size: cover;
     background-position: top center;
+  }
+  .hero-slide-img {
+    object-position: top center;
+  }
+  .hero-section .wave-divider {
+    height: 35px;
+  }
+  .wave-divider svg {
+    height: 35px;
+  }
+  .carousel-indicators {
+    bottom: 30px;
   }
 }
 
@@ -226,7 +259,7 @@
 
 @media (max-width: 968px) {
   .hero-slide-overlay {
-    background: rgba(255, 255, 255, 0.85);
+    display: none;
   }
   .carousel-controls {
     display: none;
