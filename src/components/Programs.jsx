@@ -175,7 +175,14 @@ const Programs = () => {
               <div className="course-content">
                 <h3 className="course-title" style={{color: currentHub.color}}>{course.title}</h3>
                 <p className="course-desc">{course.desc}</p>
-                <a href="#admission" className="course-enroll-btn" style={{backgroundColor: currentHub.bgColor, color: currentHub.color}}>
+                <a 
+                  href={`https://wa.me/971545496922?text=${encodeURIComponent(`Hello SmartRead Academy, I would like to enroll in "${course.title}".`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="course-enroll-btn" 
+                  style={{backgroundColor: currentHub.bgColor, color: currentHub.color}}
+                  title="Enroll via WhatsApp: +971 54 54 96 922"
+                >
                   Enroll Now <ArrowRightCircle size={18} />
                 </a>
               </div>

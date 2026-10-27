@@ -9,6 +9,7 @@ import WhyChoose from './components/WhyChoose';
 import ContactCTA from './components/ContactCTA';
 import Footer from './components/Footer';
 import AdminPanel from './components/AdminPanel';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 import './index.css';
 
 const MainPage = () => (
@@ -23,6 +24,7 @@ const MainPage = () => (
       <ContactCTA />
     </main>
     <Footer />
+    <FloatingWhatsApp />
   </div>
 );
 

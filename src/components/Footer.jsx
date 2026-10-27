@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import { MapPin, Phone, Mail, Globe, MessageCircle, MessageSquare, Video } from 'lucide-react';
+import { MapPin, Phone, Mail, Globe, MessageSquare, Video } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const InstagramIcon = ({ size = 24, color = "currentColor" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -28,10 +29,10 @@ const Footer = () => {
               We provide a safe, caring and stimulating environment where children learn, grow and shine.
             </p>
             <div className="social-links">
-              <a href="#"><Globe size={18} /></a>
-              <a href="https://www.instagram.com/smart_read_uae?stkn=MXA4ZnZxeXU5MDExbA==" target="_blank" rel="noopener noreferrer"><InstagramIcon size={18} /></a>
-              <a href="#"><Video size={18} /></a>
-              <a href="#"><MessageSquare size={18} /></a>
+              <a href="https://maps.app.goo.gl/XygKCaCTDjuqH3Ki8?g_st=aw" target="_blank" rel="noopener noreferrer" title="Location"><Globe size={18} /></a>
+              <a href="https://www.instagram.com/smart_read_uae?stkn=MXA4ZnZxeXU5MDExbA==" target="_blank" rel="noopener noreferrer" title="Instagram"><InstagramIcon size={18} /></a>
+              <a href="https://wa.me/971545496922" target="_blank" rel="noopener noreferrer" title="WhatsApp" aria-label="WhatsApp"><WhatsAppIcon size={18} color="white" /></a>
+              <a href="tel:+971545496922" title="Call"><Phone size={18} /></a>
             </div>
           </div>
 
@@ -40,7 +41,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="#about">About Us</a></li>
               <li><a href="#courses">Programs</a></li>
-              <li><a href="#admission">Admissions</a></li>
+              <li><a href="tel:+971545496922">Admissions</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -66,7 +67,11 @@ const Footer = () => {
               </li>
               <li>
                 <Phone size={18} color="var(--kidza-orange)" />
-                <a href="tel:+971545496922">+971 54 549 6922</a>
+                <a href="tel:+971545496922">+971 54 54 96 922</a>
+              </li>
+              <li>
+                <WhatsAppIcon size={18} color="#25D366" />
+                <a href="https://wa.me/971545496922" target="_blank" rel="noopener noreferrer">+971 54 54 96 922 (WhatsApp)</a>
               </li>
               <li>
                 <Mail size={18} color="var(--kidza-orange)" />

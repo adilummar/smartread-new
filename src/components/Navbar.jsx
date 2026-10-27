@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css';
-import { Search, ChevronDown, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const Navbar = () => {
   return (
@@ -22,10 +23,17 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-right">
-          <button className="icon-btn">
-            <Search size={20} />
-          </button>
-          <a href="#admission" className="btn btn-orange">
+          <a 
+            href="https://wa.me/971545496922?text=Hello%20SmartRead%20Academy%2C%20I%20would%20like%20more%20information." 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="icon-btn whatsapp-nav-btn"
+            title="Chat on WhatsApp (+971 54 54 96 922)"
+            aria-label="Chat on WhatsApp"
+          >
+            <WhatsAppIcon size={20} color="#25D366" />
+          </a>
+          <a href="tel:+971545496922" className="btn btn-orange" title="Call to Enroll: +971 54 54 96 922">
             Enroll Now <ArrowRight size={18} />
           </a>
         </div>

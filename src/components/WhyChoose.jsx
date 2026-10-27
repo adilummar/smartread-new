@@ -46,7 +46,13 @@ const WhyChoose = () => {
                 <li><CheckCircle2 color="var(--kidza-green)" size={18} /> Expert Teachers</li>
               </ul>
               
-              <a href="#contact" className="btn btn-orange mt-4">
+              <a 
+                href="https://wa.me/971545496922?text=Hello%20SmartRead%20Academy%2C%20I%20would%20like%20to%20book%20a%20school%20tour." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-orange mt-4"
+                title="Book a Tour on WhatsApp: +971 54 54 96 922"
+              >
                 Book a Tour <ArrowRight size={18} />
               </a>
             </div>
